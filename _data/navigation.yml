@@ -3,25 +3,25 @@
 # Changing the order here will adjust the order and you can also add additional
 # links. Removing a link prevents it from showing in the header, but does not
 # prevent it from being included in the site.
+#
+# 注：Portfolio 与 Blog Posts 对应的内容已清空，暂时隐藏；
+#     需要时把下面两段前的 "#" 去掉即可恢复。
 
 main:
   - title: "Publications"
     url: /publications/
 
   - title: "Talks"
-    url: /talks/    
+    url: /talks/
 
   - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+    url: /teaching/
+
+  # - title: "Portfolio"
+  #   url: /portfolio/
+
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+
   - title: "CV"
     url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/
