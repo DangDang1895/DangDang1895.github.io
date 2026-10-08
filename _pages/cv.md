@@ -13,7 +13,7 @@ Education
 ======
 * Ph.D. student, School of Future Technology, South China University of Technology, 2026 – present
   <!-- TODO: 补充专业与导师 -->
-* M.S., China University of Petroleum (East China), 2023 – 2026
+* M.S., Qingdao Institute of Software, China University of Petroleum (East China), 2023 – 2026
 
 Research interests
 ======
