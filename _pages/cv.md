@@ -15,6 +15,12 @@ Education
   <!-- TODO: 补充专业与导师 -->
 * M.S., China University of Petroleum (East China), 2023 – 2026
 
+Research interests
+======
+* Embodied intelligence
+* Machine learning, deep learning
+* Federated learning
+
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
