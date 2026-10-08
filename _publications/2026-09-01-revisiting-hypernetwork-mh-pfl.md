@@ -7,6 +7,7 @@ excerpt: 'We revisit hypernetworks for model-heterogeneous personalized federate
 date: 2026-09-01
 venue: 'International Joint Conference on Artificial Intelligence (IJCAI)'
 paperurl: 'https://doi.org/10.24963/ijcai.2026/589'
+codeurl: 'https://github.com/DangDang1895/MH-pFL'
 citation: 'Chen Zhang, Husheng Li, Xiang Liu, Linshan Jiang, Danxin Wang. (2026). &quot;Revisiting Hypernetwork in Model Heterogeneous Personalized Federated Learning.&quot; <i>Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26)</i>, 5288&ndash;5296. DOI: 10.24963/ijcai.2026/589'
 ---
 
