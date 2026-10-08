@@ -11,8 +11,9 @@ redirect_from:
 
 Education
 ======
-* Master's student, China University of Petroleum (East China)
-  <!-- TODO: 补充专业、入学年份、导师 -->
+* Ph.D. student, South China University of Technology, 2026 – present
+  <!-- TODO: 补充专业与导师 -->
+* M.S., China University of Petroleum (East China), 2023 – 2026
 
 Publications
 ======
