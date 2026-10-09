@@ -14,6 +14,7 @@ Education
 * Ph.D. student, School of Future Technology, South China University of Technology, 2026 – present
   <!-- TODO: 补充专业与导师 -->
 * M.Eng. in Electronic Information, Qingdao Institute of Software, China University of Petroleum (East China), 2023 – 2026
+  * Supervisor: [Dr. Chen Zhang](https://computer.upc.edu.cn/_s104/_t1903/2023/0727/c20896a409078/page.psp)
 
 Research interests
 ======
