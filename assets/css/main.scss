@@ -39,3 +39,17 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/*
+ * Site-specific overrides
+ *
+ * .author__urls li 默认 white-space: nowrap，会让侧边栏里较长的「所在城市 / 单位」
+ * 被直接裁掉（连省略号都没有）。这里允许这两行换行，并用悬挂缩进把折行文字对齐到
+ * 图标右侧（2.25em = fa-fw 图标 1.25em + icon-pad-right 的 0.5em padding + 0.5em
+ * margin）。首行位置不变，所以图标与下方 Email/ORCID 等图标仍然对齐。
+ */
+.author__urls li.author__desktop {
+  white-space: normal;
+  padding-left: 2.25em;
+  text-indent: -2.25em;
+}
