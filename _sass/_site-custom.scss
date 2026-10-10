@@ -104,9 +104,11 @@ body {
   line-height: 1.8;
 }
 
-/* 小节标题：首页的 <h2>、CV 页的 setext 标题（渲染成 h1）、archive 页的分类标题 */
+/* 小节标题：首页的 <h2>、CV 页的 setext 标题（渲染成 h1，直属 .archive）、
+   archive 页的分类标题。用 :not(.page__title) 排除页面主标题。 */
 .page__content > h1,
 .page__content > h2,
+.archive > h1:not(.page__title),
 .archive > h2 {
   color: var(--ink);
   font-weight: 800;
