@@ -40,19 +40,5 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-/*
- * Site-specific overrides
- *
- * .author__urls li 默认 white-space: nowrap，会让侧边栏里较长的「所在城市 / 单位」
- * 被直接裁掉（连省略号都没有）。这里允许这两行换行，并用 flex 做悬挂缩进，
- * 让折行文字对齐到图标右侧。
- *
- * ⚠️ 不要用 text-indent 实现悬挂缩进：实测（CDP 逐图标采样）会让图标伪元素的内容盒
- * 塌缩成 0 宽并被侧边栏的 overflow 裁掉，导致 fa-location-dot / fa-building-columns
- * 两个图标直接消失（宽度只剩 icon-pad-right 的 0.5em）。
- */
-.author__urls li.author__desktop {
-  white-space: normal;
-  display: flex;
-  align-items: flex-start;
-}
+/* 站点自定义皮肤（同时包含侧边栏长文本换行的修复），见 _sass/_site-custom.scss */
+@import "site-custom";

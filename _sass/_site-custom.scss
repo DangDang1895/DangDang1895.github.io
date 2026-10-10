@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Site custom skin — "modern clean"
+   --------------------------------------------------------------------------
+   这个文件只在 main.scss 末尾被 import 一次，用来在不改主题文件的前提下
+   给站点换一套视觉：浅灰底 + 白卡片 + 蓝色强调色。
+   放在最后 import 保证同等特异性下覆盖主题默认样式。
+   ========================================================================== */
+
+:root {
+  --accent      : #2563eb;
+  --accent-ink  : #1d4ed8;
+  --ink         : #0f172a;
+  --body-text   : #3f4756;
+  --muted       : #6b7280;
+  --line        : #e6e8ec;
+  --bg          : #f7f8fa;
+  --card        : #ffffff;
+  --radius      : 14px;
+  --shadow-sm   : 0 1px 2px rgba(15, 23, 42, .04);
+  --shadow-md   : 0 8px 24px rgba(15, 23, 42, .12);
+}
+
+/* ---------- base ---------- */
+/* html 默认带白底，会阻止 body 背景铺满视口，导致内容不足时页脚露出白色 */
+html { background: var(--bg); }
+
+body {
+  background: var(--bg);
+  color: var(--body-text);
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC",
+               "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main,
+.page,
+.archive { background: transparent; }
+
+/* ---------- masthead ---------- */
+.masthead {
+  background: rgba(255, 255, 255, .86);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, .03);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+.masthead__inner-wrap { padding: .55em 1.2em; }
+
+.greedy-nav { background: transparent; }
+.greedy-nav a {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .9rem;
+}
+.greedy-nav a:hover { color: var(--ink); }
+.site-title {
+  color: var(--ink);
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+/* ---------- sidebar ---------- */
+.author__avatar img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #eceff3;
+  box-shadow: var(--shadow-md);
+}
+.author__name {
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1.06rem;
+}
+.author__bio {
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.7;
+}
+.author__urls { font-size: .85rem; }
+.author__urls i { color: var(--accent); }
+.author__urls a { color: var(--body-text); }
+.author__urls a:hover { color: var(--accent); }
+.btn--inverse { display: none; }
+
+/* 侧边栏较长的「城市 / 单位」需要换行（主题默认 white-space: nowrap 会直接裁掉）。
+   用 flex 做悬挂缩进，让折行文字对齐到图标右侧。
+   ⚠️ 不要改用 text-indent：实测（CDP 逐图标采样）会让图标伪元素的内容盒塌缩成 0 宽
+   并被侧边栏的 overflow 裁掉，fa-location-dot / fa-building-columns 会直接消失。 */
+.author__urls li.author__desktop {
+  white-space: normal;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ---------- content ---------- */
+.page__title {
+  color: var(--ink);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.page__content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* 小节标题：首页的 <h2>、CV 页的 setext 标题（渲染成 h1）、archive 页的分类标题 */
+.page__content > h1,
+.page__content > h2,
+.archive > h2 {
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1.12rem;
+  letter-spacing: -.01em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .4em;
+  margin-top: 2.2em;
+}
+/* archive 页的分类标题后面主题会再画一条 <hr>，去掉以免双线 */
+.archive > hr { display: none; }
+
+.page__content a,
+.archive__item-excerpt a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.page__content a:hover,
+.archive__item-excerpt a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- 首页 News ---------- */
+.news-list {
+  list-style: none;
+  padding-left: 0;
+}
+.news-list > li {
+  margin: 0;
+  padding: .5em 0;
+  border-bottom: 1px dashed var(--line);
+}
+.news-list > li:last-child { border-bottom: 0; }
+.news-date {
+  display: inline-block;
+  min-width: 4.8em;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: .84rem;
+  letter-spacing: .02em;
+}
+
+/* ---------- 首页 Publications ---------- */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+}
+.pub-list > li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin: .9em 0;
+  padding: 1em 1.2em;
+}
+.pub-list > li strong { color: var(--ink); font-size: 1.02rem; }
+
+/* ---------- archive 列表项（Publications / Talks 等页面）---------- */
+.list__item { margin-bottom: 1em; }
+
+.archive__item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.1em 1.3em;
+}
+.archive__item-title {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+.archive__item-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.archive__item-title a:hover { color: var(--accent); }
+.archive__item-excerpt {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+/* ---------- footer ---------- */
+.page__footer,
+#footer {
+  background: transparent;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .78rem;
+}
+.page__footer a { color: var(--muted); }

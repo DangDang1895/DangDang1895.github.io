@@ -11,15 +11,17 @@ I received my master's degree from [China University of Petroleum (East China)](
 
 <h2>News</h2>
 
-- **2026.09** — Paper published at IJCAI-26: *Revisiting Hypernetwork in Model Heterogeneous Personalized Federated Learning* (2nd author), with [code](https://github.com/DangDang1895/MH-pFL) released.
-- **2026.09** — Started my Ph.D. at the School of Future Technology, South China University of Technology.
-- **2026.06** — Received my M.S. degree from China University of Petroleum (East China).
+<ul class="news-list">
+  <li><span class="news-date">2026.09</span> Paper published at IJCAI-26: <em>Revisiting Hypernetwork in Model Heterogeneous Personalized Federated Learning</em> (2nd author), with <a href="https://github.com/DangDang1895/MH-pFL">code</a> released.</li>
+  <li><span class="news-date">2026.09</span> Started my Ph.D. at the School of Future Technology, South China University of Technology.</li>
+  <li><span class="news-date">2026.06</span> Received my M.S. degree from China University of Petroleum (East China).</li>
+</ul>
 
 [Email](mailto:202610196897@mail.scut.edu.cn) / [Github](https://github.com/DangDang1895)
 
 <h2>Publications</h2>
 
-<ul>
+<ul class="pub-list">
   {% assign pubs = site.publications | sort: "date" | reverse %}
   {% for post in pubs %}
   <li>
